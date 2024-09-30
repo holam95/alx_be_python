@@ -10,11 +10,11 @@ shopping_list = []
 while True:
     menu = int(input(display_menu()))
     if menu == 1:
-        newitem = input("Enter the new item: ")
+        newitem = input("Enter the item to add: ")
         shopping_list.append(newitem)
         
     elif menu == 2:
-        remitem = input("Enter item to remove: ")
+        remitem = input("Enter the item to remove: ")
         if remitem in shopping_list:
             shopping_list.remove(remitem)
         else:
