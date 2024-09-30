@@ -1,26 +1,21 @@
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR=9/5
-
-
 def convert_to_celsius(fahrenheit):
-    return FAHRENHEIT_TO_CELSIUS_FACTOR
-    
-    
+    celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+    return celsius
 
 def convert_to_fahrenheit(celsius):
-    return CELSIUS_TO_FAHRENHEIT_FACTOR
+    fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+    return fahrenheit
+
+# User Interaction
+temperature = float(input("Enter the temperature value: "))
+scale = input("Enter 'C' if the temperature is in Celsius or 'F' if it is in Fahrenheit: ").strip().upper()
     
-    
-Temp = int(input("Enter temperature 1 for Fahrenheit,2 for celcius: "))
-
-
-if Temp == 1:
-    Fah = int(input("Enter temperature in Fahrenheit: "))
-    print("temp to celcius:", convert_to_celsius(Fah), "cel")
-
-elif Temp == 2:
-    cel = int(input("Enter temperature in celcius: "))
-    print("temp to Fahrenheit: ", convert_to_fahrenheit(cel), "fah")
-
+if scale == 'F':
+    celsius = convert_to_celsius(temperature)
+    print(f"{temperature}°F is equal to {celsius:.2f}°C.")
+elif scale == 'C':
+    fahrenheit = convert_to_fahrenheit(temperature)
+    print(f"{temperature}°C is equal to {fahrenheit:.2f}°F.")
 else:
-    print("Invalid temperature. Please enter a numeric value.")
+    print("Error Invalid temperature. Please enter a numeric value.")
+
