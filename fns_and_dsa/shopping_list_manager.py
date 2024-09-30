@@ -1,7 +1,14 @@
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
+    return "Choose one option"
 shopping_list = []
 
 while True:
-    menu = int(input("Enter 1 to add item,2 to remove item,3 to print list,4 to exit: "))
+    menu = int(input(display_menu()))
     if menu == 1:
         newitem = input("Enter the new item: ")
         shopping_list.append(newitem)
@@ -24,4 +31,5 @@ while True:
     
     else:
         print("Enter a valid task")
+         
          
