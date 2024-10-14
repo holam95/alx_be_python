@@ -23,4 +23,4 @@ class BankAccount:
 
     def display_balance(self):
         """Display the current account balance in a user-friendly format."""
-        print("Current balance:" ,self.__account_balance:.2f)
+        print("Current Balance:" ,self.__account_balance:.2f)
