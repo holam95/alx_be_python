@@ -1,4 +1,4 @@
-class Book
+class Book:
     """A class representing a book in the library."""
     
     def __init__(self, title, author):
