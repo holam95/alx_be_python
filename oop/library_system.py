@@ -16,7 +16,7 @@ class EBook(Book):
   
 
 
-class Print_Book(Book):
+class PrintBook(Book):
     def __init__(self, tile, author, page_count):
         super().__init__(title, author)
         self.page_count = page_count
@@ -29,7 +29,7 @@ class library:
     def add_book(self,book):
         self.books.append(book)
         def list_books(self):
-        
+        # Print details of all books in the library
         if not self.books:
             print("No books in the library.")
         else:
