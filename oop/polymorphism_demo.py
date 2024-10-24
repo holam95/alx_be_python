@@ -1,6 +1,5 @@
 import math
 class Shape:
-    def __init__(self):
 
     def area(self):
         raise NotImplementedError
