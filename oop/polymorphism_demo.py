@@ -13,8 +13,8 @@ class Rectangle(Shape):
         return f"The area of the Rectangle is: self.length * self.width"
 
 class Circle(Shape):
-    def __init__(self,pie,radius):
-        self.pie = pie
+    def __init__(self,radius):
+        
         self.radius =  raadius
 
     def area(self):
