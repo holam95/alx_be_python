@@ -24,8 +24,9 @@ class PrintBook(Book):
         # Override get_details method to include file_size
         return f"{super().__str__()}, Page Count: {self.page_count}"
 
-class library:
-    self.books = []
+class Library:
+    def __init__(self):
+        self.books = []
     def add_book(self,book):
         self.books.append(book)
         def list_books(self):
