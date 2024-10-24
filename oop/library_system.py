@@ -3,7 +3,7 @@ class Book:
         self.title = title
         self.author = author
 
-     def get_details(self):
+     def __str__(self):
         return f"Title: {self.title}, Author: {self.author}"
 
 
@@ -11,8 +11,8 @@ class EBook(Book):
     def __init__(self,title,auhtor,file_size):
         super().__init_(author,title)
         self.file_size = file_size
-    def get_details(self):
-        return f"{super().get_details()}, File Size: {self.file_size}MB"
+    def __str__(self):
+        return f"{super().__str__()}, File Size: {self.file_size}MB"
   
 
 
@@ -20,9 +20,9 @@ class PrintBook(Book):
     def __init__(self, tile, author, page_count):
         super().__init__(title, author)
         self.page_count = page_count
-    def get_details(self):
+    def __str__(self):
         # Override get_details method to include file_size
-        return f"{super().get_details()}, Page Count: {self.page_count}"
+        return f"{super().__str__()}, Page Count: {self.page_count}"
 
 class library:
     self.books = []
